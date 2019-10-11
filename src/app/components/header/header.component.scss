@@ -1,0 +1,49 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+h1.header-name {
+    margin-left: 8px;
+}
+
+.icon-button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline:none;
+    // &:active{
+    //     transform: scale(.99);
+    // }
+    z-index: 10;
+}
+
+.items{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.item{
+    // color: white;
+    padding: 1rem;
+}
+.link{
+    color: black;
+    text-decoration: none;
+}
+
+.sidenav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    // z-index: 10;
+    
+}
+
+mat-sidenav {
+    width: 250px;
+    // z-index: 13;
+}
