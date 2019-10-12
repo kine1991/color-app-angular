@@ -14,7 +14,7 @@ h1.header-name {
     // &:active{
     //     transform: scale(.99);
     // }
-    z-index: 10;
+    z-index: 2;
 }
 
 .items{
@@ -44,8 +44,12 @@ h1.header-name {
     left: 0;
     right: 0;
     background: transparent;
-    // z-index: 10;
+    // z-index: 1;
     
+}
+
+mat-sidenav-content{
+    z-index: 0;
 }
 
 mat-sidenav {

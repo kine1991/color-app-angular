@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { PostPageComponent } from './components/post-page/post-page.component';
+import { PostComponent } from './shared/components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostPageComponent } from './components/post-page/post-page.component';
     HeaderComponent,
     MainLayoutComponent,
     HomePageComponent,
-    PostPageComponent
+    PostPageComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
