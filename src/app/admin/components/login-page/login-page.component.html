@@ -1,5 +1,22 @@
-<p>login-page works!</p>
+<mat-card class="login-page-mat-card">
+    <h1>Login</h1>
+    
+    <form [formGroup]="form" (ngSubmit)="submit()" type="submit" class="login-page-container">
+        <mat-form-field>
+            <input matInput placeholder="Enter your email" formControlName="email" required>
+            <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">{{getErrorMessageForEmail()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your password" formControlName="password" [type]="hidePassword ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hidePassword">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-error *ngIf="form.get('password').invalid && form.get('password').touched">{{getErrorMessageForPassword()}}</mat-error>
+        </mat-form-field>
 
-<button (click)="css()">click</button>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum fugiat dolorem repellendus praesentium deleniti debitis nesciunt itaque ratione quia velit corporis, recusandae neque temporibus eos perspiciatis eaque dignissimos, accusantium aut!</p>
+        <!-- <button type="submit" mat-icon-button >Login</button> -->
+        <button mat-icon-button [disabled]="form.invalid">Login</button>
+    </form>
+    
+</mat-card>

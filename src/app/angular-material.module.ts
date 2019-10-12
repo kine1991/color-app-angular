@@ -8,6 +8,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
     imports: [],
@@ -19,7 +21,9 @@ import {MatCardModule} from '@angular/material/card';
         MatSidenavModule,
         MatButtonModule,
         MatListModule,
-        MatCardModule
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     providers: [],
 })
