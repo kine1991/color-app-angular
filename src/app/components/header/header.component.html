@@ -3,9 +3,10 @@
     <h1 class="header-name">My App</h1>
     <div class="spacer"></div>
     <ul class="items">
-        <li *ngFor="let item of items; index as i" class="item"><a class="link" href="">{{item.name}}</a></li>
+        <li *ngFor="let item of items; index as i" class="item"><a class="link_nav" href="">{{item.name}}</a></li>
     </ul>
 </mat-toolbar>
+
 <mat-sidenav-container class="sidenav-container" (click)="isOpen = false">
     <mat-sidenav mode="over" [opened]="isOpen" class="ff" >
         <mat-nav-list>
