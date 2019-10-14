@@ -12,10 +12,12 @@ import { HeaderForAdminComponent } from './components/header-for-admin/header-fo
 import { AngularMaterialModule } from '../angular-material.module';
 import { AuthService } from './shared/services/auth.service';
 import { SharedModule } from '../shared/shared.module';
+import { AuthGuard } from './shared/services/auth.guard';
+import { RegisterPageComponent } from './components/register-page/register-page.component';
 
 
 @NgModule({
-    declarations: [AdminLayoutComponent, LoginPageComponent, DashboardPageComponent, CreatePageComponent, EditPageComponent, HeaderForAdminComponent],
+    declarations: [AdminLayoutComponent, LoginPageComponent, DashboardPageComponent, CreatePageComponent, EditPageComponent, HeaderForAdminComponent, RegisterPageComponent],
     imports: [
         CommonModule,
         FormsModule,
@@ -26,13 +28,13 @@ import { SharedModule } from '../shared/shared.module';
             {path: '', component: AdminLayoutComponent, children: [
                 {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
                 {path: 'login', component: LoginPageComponent},
-                {path: 'dashboard', component: DashboardPageComponent},
-                {path: 'create', component: CreatePageComponent},
-                {path: 'post/:id/edit', component: EditPageComponent},
+                {path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
+                {path: 'create', component: CreatePageComponent, canActivate: [AuthGuard]},
+                {path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]},
             ]}
         ])
     ],
     exports: [RouterModule],
-    providers: [AuthService]
+    providers: [AuthService, AuthGuard]
 })
 export class AdminModule { }

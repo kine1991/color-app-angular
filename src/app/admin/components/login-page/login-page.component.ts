@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormControl, FormGroup } from '@angular/forms';
 import { User } from '../../../shared/interfaces';
 import { AuthService } from '../../shared/services/auth.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-login-page',
@@ -13,14 +13,22 @@ export class LoginPageComponent implements OnInit {
 
   hidePassword = true;
   submitted = false
+  message: string
 
   form: FormGroup
 
   constructor(
     private auth: AuthService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
   ngOnInit() {
+    this.route.queryParams.subscribe((params: Params) => {
+      if(params['loginAgain']){
+        this.message = 'Please login again'
+      }
+      console.log(params['loginAgain'])
+    })
     this.form = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]),
