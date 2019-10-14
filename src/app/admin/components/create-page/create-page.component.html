@@ -1,1 +1,23 @@
-<p>create-page works!</p>
+<mat-card class="create-page-mat-card">
+    <h1>Create Post</h1>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" type="submit" class="create-page-container">
+        <mat-form-field>
+            <input matInput placeholder="Enter your title" formControlName="title" required>
+            <mat-error *ngIf="form.get('title').invalid && form.get('title').touched">{{getErrorMessageForTitle()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your text" formControlName="text" required>
+            <mat-error *ngIf="form.get('text').invalid && form.get('text').touched">{{getErrorMessageForText()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Enter your author" formControlName="author" required>
+            <mat-error *ngIf="form.get('author').invalid && form.get('author').touched">{{getErrorMessageForAuthor()}}</mat-error>
+        </mat-form-field>
+
+        <quill-editor formControlName="text"></quill-editor>
+
+        <button type="submit" mat-icon-button >Login</button>
+    </form>
+    
+</mat-card>

@@ -1,9 +1,7 @@
 <mat-card class="login-page-mat-card">
     <h1>Login</h1>
     <h2 class="danger" *ngIf="message">{{message}}</h2>
-    <div class="danger" *ngIf="auth.error$ | async as error">
-        {{error}}
-    </div>
+    <div class="danger" *ngIf="auth.error$ | async as error">{{error}}</div>
     <form [formGroup]="form" (ngSubmit)="submit()" type="submit" class="login-page-container">
         <mat-form-field>
             <input matInput placeholder="Enter your email" formControlName="email" required>

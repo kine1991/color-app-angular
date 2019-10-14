@@ -1,9 +1,9 @@
 <mat-card class="register-page-mat-card">
     <h1>Register</h1>
+
     <!-- <h2 class="danger" *ngIf="message">{{message}}</h2> -->
-    <!-- <div class="danger" *ngIf="auth.error$ | async as error">
-        {{error}}
-    </div> -->
+    <div class="danger" *ngIf="auth.error$ | async as error">{{error}}</div>
+    
     <form [formGroup]="form" (ngSubmit)="submit()" type="submit" class="register-page-container">
         <mat-form-field>
             <input matInput placeholder="Enter your name" formControlName="name" required>

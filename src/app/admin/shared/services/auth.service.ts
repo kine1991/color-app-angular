@@ -61,6 +61,12 @@ export class AuthService {
                 break
             case 'EMAIL_NOT_FOUND':
                 this.error$.next('Email not found')
+            case 'EMAIL_EXISTS':
+                this.error$.next('The email address is already in use by another account')
+            case 'OPERATION_NOT_ALLOWED':
+                this.error$.next('Password sign-in is disabled for this project')
+            case 'TOO_MANY_ATTEMPTS_TRY_LATER':
+                this.error$.next('We have blocked all requests from this device due to unusual activity. Try again later.')
                 break
         }
         
