@@ -6,10 +6,10 @@
             <input matInput placeholder="Enter your title" formControlName="title" required>
             <mat-error *ngIf="form.get('title').invalid && form.get('title').touched">{{getErrorMessageForTitle()}}</mat-error>
         </mat-form-field>
-        <mat-form-field>
+        <!-- <mat-form-field>
             <input matInput placeholder="Enter your text" formControlName="text" required>
             <mat-error *ngIf="form.get('text').invalid && form.get('text').touched">{{getErrorMessageForText()}}</mat-error>
-        </mat-form-field>
+        </mat-form-field> -->
         <mat-form-field>
             <input matInput placeholder="Enter your author" formControlName="author" required>
             <mat-error *ngIf="form.get('author').invalid && form.get('author').touched">{{getErrorMessageForAuthor()}}</mat-error>

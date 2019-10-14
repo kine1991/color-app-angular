@@ -36,6 +36,7 @@ import { RegisterPageComponent } from './components/register-page/register-page.
         ])
     ],
     exports: [RouterModule],
-    providers: [AuthService, AuthGuard]
+    providers: [AuthGuard],
+    // providers: [AuthService, AuthGuard]
 })
 export class AdminModule { }
