@@ -30,6 +30,17 @@ export class AuthService {
             )
     }
 
+    register(data){
+        const {email, password, name} = data
+        const user = {email, password, returnSecureToken: true}
+        // console.log(email, password, name)
+        return this.http.post(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${environment.apiKey}`, user)
+            .pipe(
+                tap(this.setToken),
+                catchError(this.handleError.bind(this)) // bind(this) потому что в методе handleError будем использовать слово this
+            )
+    }
+
     logout(){
         this.setToken(null)
     }

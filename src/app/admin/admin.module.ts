@@ -28,6 +28,7 @@ import { RegisterPageComponent } from './components/register-page/register-page.
             {path: '', component: AdminLayoutComponent, children: [
                 {path: '', redirectTo: '/admin/login', pathMatch: 'full'},
                 {path: 'login', component: LoginPageComponent},
+                {path: 'register', component: RegisterPageComponent},
                 {path: 'dashboard', component: DashboardPageComponent, canActivate: [AuthGuard]},
                 {path: 'create', component: CreatePageComponent, canActivate: [AuthGuard]},
                 {path: 'post/:id/edit', component: EditPageComponent, canActivate: [AuthGuard]},

@@ -8,7 +8,8 @@
 <mat-sidenav-container class="header-for-admin-sidenav-container">
     <mat-sidenav mode="side" [opened]="isOpen" class="header-for-admin-sidenav">
         <mat-nav-list *ngIf="!auth.isAuthenticated()">
-            <a routerLinkActive="active" mat-list-item [routerLink]="['/admin', 'login']" >log in</a>
+            <a routerLinkActive="active" mat-list-item [routerLink]="['/admin', 'login']" >login</a>
+            <a routerLinkActive="active" mat-list-item [routerLink]="['/admin', 'register']" >register</a>
         </mat-nav-list>
         <mat-nav-list *ngIf="auth.isAuthenticated()">
             <!-- <a mat-list-item routerLink="." *ngFor="let item of items; index as i">{{item.name}}</a> -->
