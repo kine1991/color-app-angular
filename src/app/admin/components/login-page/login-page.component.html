@@ -1,6 +1,8 @@
 <mat-card class="login-page-mat-card">
     <h1>Login</h1>
-    
+    <div class="alert" *ngIf="auth.error$ | async as error">
+        {{error}}
+    </div>
     <form [formGroup]="form" (ngSubmit)="submit()" type="submit" class="login-page-container">
         <mat-form-field>
             <input matInput placeholder="Enter your email" formControlName="email" required>
@@ -16,7 +18,7 @@
         </mat-form-field>
 
         <!-- <button type="submit" mat-icon-button >Login</button> -->
-        <button mat-icon-button [disabled]="form.invalid">Login</button>
+        <button mat-icon-button [disabled]="form.invalid || submitted">Login</button>
     </form>
     
 </mat-card>

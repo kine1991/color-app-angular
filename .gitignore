@@ -12,6 +12,7 @@
 
 #my
 /src/app/firebase/firebaseConfig.js
+/src/app/firebase/firebaseConfig.ts
 
 # profiling files
 chrome-profiler-events*.json

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../shared/services/auth.service';
 
 @Component({
   selector: 'app-header-for-admin',
@@ -14,7 +15,10 @@ export class HeaderForAdminComponent implements OnInit {
     { link: '/admin/create', name: 'Create' },
   ]
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    public auth: AuthService
+  ) { }
 
   ngOnInit() {
   }
@@ -26,6 +30,7 @@ export class HeaderForAdminComponent implements OnInit {
   logout(event: Event){
     // console.log('logout', event)
     event.preventDefault()
+    this.auth.logout()
     this.router.navigate(['/admin', 'login'])
   }
 }
