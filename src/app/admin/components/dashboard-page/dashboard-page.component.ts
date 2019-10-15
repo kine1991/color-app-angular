@@ -13,6 +13,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
   // posts
   posts: Post[] = []
   postsSub: Subscription
+  searchStr = ''
 
   displayedColumns: string[] = ['id', 'author', 'title', 'text', 'date', 'open', 'remove'];
 

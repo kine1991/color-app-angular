@@ -10,14 +10,24 @@ import { CreatePageComponent } from './components/create-page/create-page.compon
 import { EditPageComponent } from './components/edit-page/edit-page.component';
 import { HeaderForAdminComponent } from './components/header-for-admin/header-for-admin.component';
 import { AngularMaterialModule } from '../angular-material.module';
-import { AuthService } from './shared/services/auth.service';
+// import { AuthService } from './shared/services/auth.service';
 import { SharedModule } from '../shared/shared.module';
 import { AuthGuard } from './shared/services/auth.guard';
 import { RegisterPageComponent } from './components/register-page/register-page.component';
+import { SearchPipe } from './shared/pipes/search.pipe';
 
 
 @NgModule({
-    declarations: [AdminLayoutComponent, LoginPageComponent, DashboardPageComponent, CreatePageComponent, EditPageComponent, HeaderForAdminComponent, RegisterPageComponent],
+    declarations: [
+        AdminLayoutComponent, 
+        LoginPageComponent, 
+        DashboardPageComponent, 
+        CreatePageComponent, 
+        EditPageComponent, 
+        HeaderForAdminComponent, 
+        RegisterPageComponent,
+        SearchPipe
+    ],
     imports: [
         CommonModule,
         FormsModule,
