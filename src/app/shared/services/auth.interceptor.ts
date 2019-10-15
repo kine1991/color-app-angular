@@ -12,20 +12,20 @@ export class AuthInterceptor implements HttpInterceptor {
         private router: Router
     ){}
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-        console.log('Intercept0')
+        // console.log('Intercept0')
         if(this.auth.isAuthenticated()){
             req = req.clone({
                 setParams: {
                     auth: this.auth.token
                 }
             })
-            console.log('req')
-            console.log(req)
+            // console.log('req')
+            // console.log(req)
         }
         return next.handle(req)
             .pipe(
                 tap(() => {
-                    console.log('Intercept')
+                    // console.log('Intercept')
                 }),
                 catchError((error: HttpErrorResponse) => {
                     console.log('AuthInterceptor', error)
