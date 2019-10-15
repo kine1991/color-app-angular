@@ -13,6 +13,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
   // posts
   posts: Post[] = []
   postsSub: Subscription
+  deletePostsSub: Subscription
   searchStr = ''
 
   displayedColumns: string[] = ['id', 'author', 'title', 'text', 'date', 'open', 'remove'];
@@ -35,10 +36,15 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     if(this.postsSub){
       this.postsSub.unsubscribe()
     }
+    if(this.deletePostsSub){
+      this.deletePostsSub.unsubscribe()
+    }
   }
 
   remove(id: string){
-    console.log(id)
+    this.deletePostsSub = this.postsService.remove(id).subscribe(() => {
+      this.posts = this.posts.filter(post => post.id !== id)
+    })
   }
 
 }
