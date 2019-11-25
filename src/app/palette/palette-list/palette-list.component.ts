@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PaletteService } from '../palette.service';
 
 @Component({
   selector: 'app-palette-list',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaletteListComponent implements OnInit {
 
-  constructor() { }
+  seedColors
+
+  constructor(paletteService: PaletteService) {
+    this.seedColors = paletteService.seedColors;
+  }
+
+  // console.log(paletteService)
 
   ngOnInit() {
+    // console.log(paletteService.xxx)
+    // paletteService
+    console.log('this.', this.seedColors)
+  }
+
+  test(){
+    // console.log(paletteService.xxx)
   }
 
 }

@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { ColorBoxComponent } from './palette/color-box/color-box.component';
 import { PaletteComponent } from './palette/palette/palette.component';
 import { PaletteListComponent } from './palette/palette-list/palette-list.component';
+import { PaletteMiniComponent } from './palette/palette-mini/palette-mini.component';
 
 
 registerLocaleData(ruLocale, 'ru')
@@ -25,7 +26,8 @@ registerLocaleData(ruLocale, 'ru')
     HeaderComponent,
     ColorBoxComponent,
     PaletteComponent,
-    PaletteListComponent
+    PaletteListComponent,
+    PaletteMiniComponent
   ],
   imports: [
     BrowserModule,

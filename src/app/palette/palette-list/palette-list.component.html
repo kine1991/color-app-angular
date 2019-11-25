@@ -1,1 +1,8 @@
-<p>palette-list works!</p>
+<div class="palette-list-container">
+    <p class="title">Palette List</p>
+    <div class="palette-list">
+        <div *ngFor="let palette of seedColors">
+            <app-palette-mini [routerLink]="['/palette', palette.id]" [palette]="palette"></app-palette-mini>
+        </div>
+    </div>
+</div>

@@ -1,7 +1,7 @@
 export const seedColors = [
     {
-      paletteName: "Material UI Colors v1",
-      id: "material-ui-colors",
+      paletteName: "UI Colors v1",
+      id: "ui-colors-v1",
       emoji: "🎨",
       colors: [
         { name: "red", color: "#F44336" },
@@ -26,9 +26,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v2",
-      id: "flat-ui-colors-v1",
-      emoji: "🤙",
+      paletteName: "UI Colors v2",
+      id: "ui-colors-v2",
+      emoji: "🎨",
       colors: [
         { name: "Turquoise", color: "#1abc9c" },
         { name: "Emerald", color: "#2ecc71" },
@@ -53,9 +53,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v3",
-      id: "flat-ui-colors-dutch",
-      emoji: "🇳🇱",
+      paletteName: "UI Colors v3",
+      id: "ui-colors-v3",
+      emoji: "🎨",
       colors: [
         { name: "Sunflower", color: "#FFC312" },
         { name: "Energos", color: "#C4E538" },
@@ -80,9 +80,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v4",
-      id: "flat-ui-colors-american",
-      emoji: "🇺🇸",
+      paletteName: "UI Colors v4",
+      id: "ui-colors-v4",
+      emoji: "🎨",
       colors: [
         { name: "LightGreenishBlue", color: "#55efc4" },
         { name: "FadedPoster", color: "#81ecec" },
@@ -107,9 +107,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v5",
-      id: "flat-ui-colors-aussie",
-      emoji: "🇦🇺",
+      paletteName: "UI Colors v5",
+      id: "ui-colors-v5",
+      emoji: "🎨",
       colors: [
         { name: "Beekeeper", color: "#f6e58d" },
         { name: "SpicedNectarine", color: "#ffbe76" },
@@ -134,9 +134,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v6",
-      id: "flat-ui-colors-british",
-      emoji: "🇬🇧",
+      paletteName: "UI Colors v6",
+      id: "ui-colors-v6",
+      emoji: "🎨",
       colors: [
         { name: "ProtossPylon", color: "#00a8ff" },
         { name: "Periwinkle", color: "#9c88ff" },
@@ -161,9 +161,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v7",
-      id: "flat-ui-colors-spanish",
-      emoji: "🇪🇸",
+      paletteName: "UI Colors v7",
+      id: "ui-colors-v7",
+      emoji: "🎨",
       colors: [
         { name: "JacksonsPurple", color: "#40407a" },
         { name: "C64Purple", color: "#706fd3" },
@@ -188,9 +188,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v8",
-      id: "flat-ui-colors-indian",
-      emoji: "🇮🇳",
+      paletteName: "UI Colors v8",
+      id: "ui-colors-v8",
+      emoji: "🎨",
       colors: [
         { name: "OrchidOrange", color: "#FEA47F" },
         { name: "SpiroDiscoBall", color: "#25CCF7" },
@@ -215,9 +215,9 @@ export const seedColors = [
       ]
     },
     {
-      paletteName: "Material UI Colors v9",
-      id: "flat-ui-colors-french",
-      emoji: "🇫🇷",
+      paletteName: "UI Colors v9",
+      id: "ui-colors-v9",
+      emoji: "🎨",
       colors: [
         { name: "FlatFlesh", color: "#fad390" },
         { name: "MelonMelody", color: "#f8c291" },

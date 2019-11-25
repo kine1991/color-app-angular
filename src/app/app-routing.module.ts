@@ -6,7 +6,7 @@ import { PaletteComponent } from './palette/palette/palette.component';
 
 const routes: Routes = [
   { path: '', component: PaletteListComponent },
-  { path: 'palette',      component: PaletteComponent },
+  { path: 'palette/:paletteId', component: PaletteComponent },
   // {path: '', component: MainLayoutComponent, children: [
   //   // {path: '', redirectTo: '/', pathMatch: 'full'},
   //   // {path: '', component: HomePageComponent},

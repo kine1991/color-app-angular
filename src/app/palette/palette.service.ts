@@ -9,5 +9,7 @@ export class PaletteService {
 
   seedColors = seedColors
 
+  xxx = 'ooo'
+
   constructor() { }
 }

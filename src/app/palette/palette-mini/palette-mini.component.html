@@ -1,0 +1,13 @@
+<div class="palette-mini">
+    <div class="palette-mini-main-container" >
+        <div class="palette-mini-main" *ngFor="let item of palette.colors" >
+            <div [style.background]="item.color" class="palette-mini-single-palette"></div>
+        </div>
+        <!-- <div [style.background]="item.color" class="palette-mini-single-palette"></div> -->
+            <!-- palette-mini-main -->
+    </div>
+    <div class="palette-mini-footer">
+        <p>{{palette.paletteName}}</p>
+        <p>{{palette.emoji}}</p>
+    </div>
+</div>
