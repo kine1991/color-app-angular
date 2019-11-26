@@ -1,1 +1,26 @@
-<p>palette works!</p>
+<div class="palette-container">
+    <div class="palette">
+        <div *ngFor="let color of palette.colors" [style.background]="color.color" class="single-palette">
+            <div class="single-palette-name">{{color.name}}</div>
+            <div class="single-palette-copy-button">Copy</div>
+        </div>
+    </div>
+    <div class="single-palette-footer">
+        <p>{{palette.paletteName}}</p>
+        <p>{{palette.emoji}}</p>
+    </div>
+
+</div>
+
+
+
+<!-- <p>palette works!</p>
+
+
+<a routerLink="/palette/ui-colors-v1" >ui-colors-v1</a>
+<a routerLink="/palette/ui-colors-v2" >ui-colors-v2</a>
+<a routerLink="/palette/ui-colors-v3" >ui-colors-v3</a>
+
+<hr>
+
+{{palette | json}} -->

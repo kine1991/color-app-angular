@@ -10,8 +10,8 @@ export class HeaderComponent implements OnInit {
   isOpen = false
 
   items = [
-    { link: '/', name: 'Palette List' },
-    { link: '/palette', name: 'Palette' },
+    { link: '/palette', name: 'Palette List' },
+    { link: '/palette/ui-colors-v1', name: 'Palette' },
   ]
 
   constructor() { }
