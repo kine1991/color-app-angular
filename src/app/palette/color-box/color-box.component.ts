@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-color-box',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./color-box.component.scss']
 })
 export class ColorBoxComponent implements OnInit {
+
+  @Input() color;
 
   constructor() { }
 

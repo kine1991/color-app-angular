@@ -42,3 +42,19 @@
     padding: 0 1rem;
     background: gray;
 }
+
+.single-palette-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // width: 50%;
+    margin: 0rem 1rem;
+}
+
+mat-slider{
+    width: 500px;
+}
+
+.slider{
+    display: flex;
+}

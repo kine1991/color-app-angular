@@ -1,7 +1,24 @@
 <div class="palette-container">
+    <div class="single-palette-header">
+        <div class="slider">
+            <mat-slider min="100" max="900" step="100" showTicks="true" [(ngModel)]="level" color="primary" ></mat-slider>
+            <p>{{level}}</p> 
+        </div>
+        <!-- <div [style.marginRight]="auto"></div> -->
+        <mat-form-field>
+            <mat-label>Select Format</mat-label>
+            <mat-select matNativeControl [(ngModel)]="format">
+                <mat-option [value]="'hex'">HEX - #000</mat-option>
+                <mat-option [value]="'rgb'">RGB - rgb(0,0,0)</mat-option>
+                <mat-option [value]="'rgba'">RGBA - rgba(0,0,0, 1.0)</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
     <div class="palette">
-        <div *ngFor="let color of palette.colors" [style.background]="color.color" class="single-palette">
+        <!-- <app-color-box *ngFor="let color of palette.colors[level]"  [color]="color['hex']"></app-color-box> -->
+        <div *ngFor="let color of palette.colors[level]" [style.background]="color['hex']" class="single-palette">
             <div class="single-palette-name">{{color.name}}</div>
+            <!-- <div class="single-palette-name">{{color[format]}}</div> -->
             <div class="single-palette-copy-button">Copy</div>
         </div>
     </div>
@@ -9,18 +26,5 @@
         <p>{{palette.paletteName}}</p>
         <p>{{palette.emoji}}</p>
     </div>
-
 </div>
 
-
-
-<!-- <p>palette works!</p>
-
-
-<a routerLink="/palette/ui-colors-v1" >ui-colors-v1</a>
-<a routerLink="/palette/ui-colors-v2" >ui-colors-v2</a>
-<a routerLink="/palette/ui-colors-v3" >ui-colors-v3</a>
-
-<hr>
-
-{{palette | json}} -->
