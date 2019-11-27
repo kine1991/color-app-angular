@@ -1,10 +1,9 @@
 <div class="palette-container">
     <div class="single-palette-header">
         <div class="slider">
-            <mat-slider min="100" max="900" step="100" showTicks="true" [(ngModel)]="level" color="primary" ></mat-slider>
-            <p>{{level}}</p> 
+            <mat-slider min="100" max="900" step="100" tickInterval="auto" [(ngModel)]="level" color="primary" ></mat-slider>
+            <p class="slider-level">{{level}}</p> 
         </div>
-        <!-- <div [style.marginRight]="auto"></div> -->
         <mat-form-field>
             <mat-label>Select Format</mat-label>
             <mat-select matNativeControl [(ngModel)]="format">
@@ -15,12 +14,7 @@
         </mat-form-field>
     </div>
     <div class="palette">
-        <!-- <app-color-box *ngFor="let color of palette.colors[level]"  [color]="color['hex']"></app-color-box> -->
-        <div *ngFor="let color of palette.colors[level]" [style.background]="color['hex']" class="single-palette">
-            <div class="single-palette-name">{{color.name}}</div>
-            <!-- <div class="single-palette-name">{{color[format]}}</div> -->
-            <div class="single-palette-copy-button">Copy</div>
-        </div>
+        <app-color-box *ngFor="let color of palette.colors[level]" [name]="color.name" [color]="color[format]"></app-color-box>
     </div>
     <div class="single-palette-footer">
         <p>{{palette.paletteName}}</p>
@@ -28,3 +22,9 @@
     </div>
 </div>
 
+
+
+<!-- <div *ngFor="let color of palette.colors[level]" [style.background]="color['hex']" class="single-palette">
+    <div class="single-palette-name">{{color.name}}</div>
+    <div class="single-palette-copy-button">Copy</div>
+</div> -->

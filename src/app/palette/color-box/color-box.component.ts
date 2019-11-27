@@ -8,10 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ColorBoxComponent implements OnInit {
 
   @Input() color;
+  @Input() name;
 
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.name)
   }
 
 }
