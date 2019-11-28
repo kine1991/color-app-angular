@@ -21,6 +21,13 @@ export class ColorBoxComponent implements OnInit {
     this.fontColor = chroma(this.color).luminance() >= 0.5 ? "#000319" : "whitesmoke"
   }
 
+  onEvent(event) {
+    event.stopPropagation();
+    // console.log('ddd', event)
+    // event.stopPropagation();
+ }
+
+
   copiedColor(payload: string) {
     this.copiedColorName = 'Copied ' + payload;
     this.copied = true;
