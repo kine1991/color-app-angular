@@ -9,11 +9,20 @@ export class ColorBoxComponent implements OnInit {
 
   @Input() color;
   @Input() name;
+  copiedColorName
 
   constructor() { }
 
   ngOnInit() {
     // console.log(this.name)
   }
+
+  copiedColor(payload: string) {
+    this.copiedColorName = payload;
+    setTimeout(() => {
+      this.copiedColorName = undefined;
+    },3000);
+    // console.info(`'${payload}' has been copied to clipboard`);
+ }
 
 }

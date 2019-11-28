@@ -16,6 +16,7 @@ import { PaletteComponent } from './palette/palette/palette.component';
 import { PaletteListComponent } from './palette/palette-list/palette-list.component';
 import { PaletteMiniComponent } from './palette/palette-mini/palette-mini.component';
 import { FormsModule } from '@angular/forms';
+import { CopyClipboardDirective } from './palette/copy-clipboard.directive';
 
 
 
@@ -29,7 +30,8 @@ registerLocaleData(ruLocale, 'ru')
     ColorBoxComponent,
     PaletteComponent,
     PaletteListComponent,
-    PaletteMiniComponent
+    PaletteMiniComponent,
+    CopyClipboardDirective
   ],
   imports: [
     BrowserModule,
