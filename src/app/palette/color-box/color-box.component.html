@@ -1,6 +1,6 @@
-<div class="color-box" [style.background]="color" [appCopyClipboard]="color" (copied)="copiedColor($event)">
+<div class="color-box" [style.background]="color" [style.color]="fontColor" [appCopyClipboard]="color" (copied)="copiedColor($event)">
+    <div [ngClass]="{'color-box-copied': copied}" [style.background]="color">{{copiedColorName}}</div>
     <p class="color-box-title">{{name}}</p>
     <div class="color-box-copy" >Copy</div>
-    <div *ngIf="expression">{{copiedColorName}}</div>
 </div>
 

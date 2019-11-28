@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import chroma from "chroma-js";
 
 @Component({
   selector: 'app-color-box',
@@ -10,18 +11,23 @@ export class ColorBoxComponent implements OnInit {
   @Input() color;
   @Input() name;
   copiedColorName
+  copied = false
+  fontColor = 'black'
 
   constructor() { }
 
   ngOnInit() {
     // console.log(this.name)
+    this.fontColor = chroma(this.color).luminance() >= 0.5 ? "#000319" : "whitesmoke"
   }
 
   copiedColor(payload: string) {
-    this.copiedColorName = payload;
+    this.copiedColorName = 'Copied ' + payload;
+    this.copied = true;
     setTimeout(() => {
       this.copiedColorName = undefined;
-    },3000);
+      this.copied = false;
+    }, 4000);
     // console.info(`'${payload}' has been copied to clipboard`);
  }
 
