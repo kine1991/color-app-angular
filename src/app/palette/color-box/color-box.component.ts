@@ -8,23 +8,21 @@ import chroma from "chroma-js";
 })
 export class ColorBoxComponent implements OnInit {
 
-  @Input() color;
+  @Input() background;
   @Input() name;
+  @Input() colorId;
   copiedColorName
   copied = false
-  fontColor = 'black'
+  color = 'black'
 
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.name)
-    this.fontColor = chroma(this.color).luminance() >= 0.5 ? "#000319" : "whitesmoke"
+    this.color = chroma(this.background).luminance() >= 0.5 ? "#000319" : "whitesmoke"
   }
 
   onEvent(event) {
     event.stopPropagation();
-    // console.log('ddd', event)
-    // event.stopPropagation();
  }
 
 
@@ -35,7 +33,6 @@ export class ColorBoxComponent implements OnInit {
       this.copiedColorName = undefined;
       this.copied = false;
     }, 4000);
-    // console.info(`'${payload}' has been copied to clipboard`);
  }
 
 }

@@ -14,7 +14,7 @@
         </mat-form-field>
     </div>
     <div class="palette">
-        <app-color-box *ngFor="let color of palette.colors[level]" [name]="color.name" [color]="color[format]"></app-color-box>
+        <app-color-box *ngFor="let color of palette.colors[level]" [name]="color.name" [colorId]="color.id" [background]="color[format]"></app-color-box>
     </div>
     <div class="single-palette-footer">
         <p>{{palette.paletteName}}</p>

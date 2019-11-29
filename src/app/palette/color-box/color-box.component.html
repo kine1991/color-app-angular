@@ -1,5 +1,5 @@
-<div class="color-box" [style.background]="color" [style.color]="fontColor" [appCopyClipboard]="color" (copied)="copiedColor($event)">
-    <div [ngClass]="{'color-box-copied': copied}" [style.background]="color">{{copiedColorName}}</div>
+<div class="color-box" [style.background]="background" [style.color]="color" [appCopyClipboard]="background" (copied)="copiedColor($event)">
+    <div [ngClass]="{'color-box-copied': copied}" [style.background]="background">{{copiedColorName}}</div>
     <p class="color-box-title">{{name}}</p>
     <div class="color-box-copy">Copy</div>
     <div (click)="onEvent($event)" class="color-box-more">More</div>

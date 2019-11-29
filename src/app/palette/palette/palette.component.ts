@@ -33,9 +33,11 @@ export class PaletteComponent implements OnInit {
   }
 
   ngOnInit() {
+    
     this.route.paramMap.subscribe((params: Params) => {
       let paletteId = params.params.paletteId;
       this.palette = this.getPaletteByLevel(paletteId);
+      console.log(this.getPaletteByLevel(paletteId))
     });
     // console.log('params', paletteId)
     // console.log(this.getPaletteByLevel(paletteId))
