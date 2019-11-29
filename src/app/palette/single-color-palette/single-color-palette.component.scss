@@ -2,7 +2,7 @@
 .single-color-palette-container{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    height: 100vh;
+    height: calc(100vh - 64px);
 }
 
 .back{
@@ -27,4 +27,5 @@
     // p {
     //     font-size: 22px;
     // }
+    height: 64px;
 }
