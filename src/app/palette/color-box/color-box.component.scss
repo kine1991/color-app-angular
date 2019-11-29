@@ -42,8 +42,9 @@
     bottom: 0;
     right: 0;
     padding: .2rem;
-    font-size: 12px;
-    padding: 0.5rem 0.5rem;
+    font-size: 14px;
+    padding: 0.5rem 1rem;
     background: rgba($color: #fff, $alpha: 0.3);
-    z-index: 100;
+    cursor: pointer;
+    // z-index: 100;
 }

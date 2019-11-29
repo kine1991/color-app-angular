@@ -25,7 +25,7 @@ export class ColorBoxComponent implements OnInit {
     this.color = chroma(this.background).luminance() >= 0.5 ? "#000319" : "whitesmoke"
   }
 
-  onEvent(event) {
+  goToSingleColorPalette(event) {
     event.stopPropagation();
     this.route.paramMap.subscribe((params: Params) => {
       this.router.navigate(['/palette', params.params.paletteId, this.colorId])

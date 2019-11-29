@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, Params } from '@angular/router';
+import { /*Router,*/ ActivatedRoute, Params } from '@angular/router';
 
 import { PaletteService } from '../palette.service';
-import { generatePalette } from '../colorHelper'
 
 @Component({
   selector: 'app-palette',
@@ -17,34 +16,22 @@ export class PaletteComponent implements OnInit {
   format = 'hex';
 
   constructor(
-    paletteService: PaletteService,
-    private router: Router,
+    private paletteService: PaletteService,
     private route: ActivatedRoute,
-  ) {
-    this.seedColors = paletteService.seedColors;
-  }
+    // private router: Router,
+  ) {}
 
-  getPalette(paletteId){
-    return this.seedColors.find(item => item.id === paletteId); // получает определенную палитру в зависимости от paletteId
-  }
 
   getPaletteByLevel(paletteId){
-    return generatePalette(this.getPalette(paletteId)); // генерирует паоитру в зависимовти от уровня цвета
+    return this.paletteService.getPaletteByLevel(paletteId)
   }
 
   ngOnInit() {
-    
+    this.seedColors = this.paletteService.seedColors;
     this.route.paramMap.subscribe((params: Params) => {
       let paletteId = params.params.paletteId;
       this.palette = this.getPaletteByLevel(paletteId);
-      console.log(this.getPaletteByLevel(paletteId))
     });
-    // console.log('params', paletteId)
-    // console.log(this.getPaletteByLevel(paletteId))
-    // this.route.params.subscribe((params: Params) => {
-    //   console.log('params', params)
-    // })
-    // console.log(this.seedColors)
   }
 
 }

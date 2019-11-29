@@ -12,7 +12,7 @@
 <div class="single-color-palette-container">
     <app-color-box *ngFor="let shade of shades" [name]="shade.name"  [background]="shade[format]"></app-color-box>
     <div class="back">
-        <div (click)="back()" class="back-button">Back</div>
+        <div (click)="goBack()" class="back-button">Back</div>
     </div>
 </div>
 
