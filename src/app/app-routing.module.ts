@@ -6,7 +6,7 @@ import { SingleColorPaletteComponent } from './palette/single-color-palette/sing
 
 
 const routes: Routes = [
-  { path: 'palette', component: PaletteListComponent },
+  { path: '', component: PaletteListComponent },
   { path: 'palette/:paletteId', component: PaletteComponent },
   { path: 'palette/:paletteId/:colorId', component: SingleColorPaletteComponent },
   // {path: '', component: MainLayoutComponent, children: [

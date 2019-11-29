@@ -1,1 +1,21 @@
-<p>single-color-palette works!</p>
+<div class="single-color-palette-header">
+    <p>Single Color Palette</p>
+    <mat-form-field>
+        <!-- <mat-label>Select Format</mat-label> -->
+        <mat-select matNativeControl [(ngModel)]="format">
+            <mat-option [value]="'hex'">HEX - #000</mat-option>
+            <mat-option [value]="'rgb'">RGB - rgb(0,0,0)</mat-option>
+            <mat-option [value]="'rgba'">RGBA - rgba(0,0,0, 1.0)</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div class="single-color-palette-container">
+    <app-color-box *ngFor="let shade of shades" [name]="shade.name"  [background]="shade[format]"></app-color-box>
+    <div class="back">
+        <div (click)="back()" class="back-button">Back</div>
+    </div>
+</div>
+
+
+
+<!-- <a mat-button (click)="aaa()" class="color-box-more" routerLink=".">More</a> -->

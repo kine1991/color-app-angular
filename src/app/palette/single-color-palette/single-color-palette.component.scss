@@ -1,0 +1,30 @@
+
+.single-color-palette-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    height: 100vh;
+}
+
+.back{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+}
+
+.back-button{
+    padding: 1rem 2rem;
+    background: rgba($color: #fff, $alpha: 0.3);
+}
+
+.single-color-palette-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.1rem 2rem;
+    // p {
+    //     font-size: 22px;
+    // }
+}

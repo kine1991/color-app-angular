@@ -2,7 +2,7 @@
     <div [ngClass]="{'color-box-copied': copied}" [style.background]="background">{{copiedColorName}}</div>
     <p class="color-box-title">{{name}}</p>
     <div class="color-box-copy">Copy</div>
-    <div (click)="onEvent($event)" class="color-box-more">More</div>
+    <div (click)="onEvent($event)" *ngIf="colorId" class="color-box-more">More</div>
     <!-- <a mat-button (click)="aaa()" class="color-box-more" routerLink=".">More</a> -->
 </div>
 

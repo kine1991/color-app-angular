@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import chroma from "chroma-js";
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-color-box',
@@ -15,7 +16,10 @@ export class ColorBoxComponent implements OnInit {
   copied = false
   color = 'black'
 
-  constructor() { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
 
   ngOnInit() {
     this.color = chroma(this.background).luminance() >= 0.5 ? "#000319" : "whitesmoke"
@@ -23,7 +27,10 @@ export class ColorBoxComponent implements OnInit {
 
   onEvent(event) {
     event.stopPropagation();
- }
+    this.route.paramMap.subscribe((params: Params) => {
+      this.router.navigate(['/palette', params.params.paletteId, this.colorId])
+    })
+  }
 
 
   copiedColor(payload: string) {
@@ -33,6 +40,6 @@ export class ColorBoxComponent implements OnInit {
       this.copiedColorName = undefined;
       this.copied = false;
     }, 4000);
- }
+  }
 
 }
