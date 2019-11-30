@@ -1,6 +1,7 @@
 .palette-list-container{
     max-width: 860px;
     margin: auto auto;
+    // padding-bottom: 2rem;
 }
 
 .title{
@@ -10,11 +11,38 @@
 }
 
 .palette-list{
-    
     height: 200px;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 30%);
     grid-gap: 2.5rem;
+
+    @media (max-width: 992px) {
+        grid-gap: 1rem;
+        margin: 2rem;
+        // grid-template-columns: repeat(3, 30%);
+    }
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        margin: 1rem;
+    }
+    @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        margin: .5rem;
+    }
+
+// @media (min-width: 576px) {  }
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) {  }
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {  }
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {  }
+
+
     // grid-template-columns: repeat(3, 1fr);
     // background: blueviolet;
 
