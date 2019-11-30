@@ -1,11 +1,11 @@
 <div class="palette-container">
     <div class="single-palette-header">
+        <div class="color-app-logo" [routerLink]="['/']">Color App</div>
         <div class="slider">
             <mat-slider min="100" max="900" step="100" tickInterval="1" [(ngModel)]="level" color="primary" ></mat-slider>
             <p class="slider-level">{{level}}</p> 
         </div>
         <mat-form-field>
-            <!-- <mat-label>Select Format</mat-label> -->
             <mat-select matNativeControl [(ngModel)]="format">
                 <mat-option [value]="'hex'">HEX - #000</mat-option>
                 <mat-option [value]="'rgb'">RGB - rgb(0,0,0)</mat-option>

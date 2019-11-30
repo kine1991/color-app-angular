@@ -19,7 +19,7 @@ export class PaletteListComponent implements OnInit {
   ngOnInit() {
     // console.log(paletteService.xxx)
     // paletteService
-    console.log('this.', this.seedColors)
+    // console.log('this.', this.seedColors)
   }
 
   test(){

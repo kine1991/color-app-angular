@@ -12,7 +12,7 @@ export class PaletteMiniComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.palette)
+    // console.log(this.palette)
   }
 
 }
