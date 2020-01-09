@@ -8,7 +8,7 @@ import { PaletteService } from '../palette.service';
 })
 export class PaletteListComponent implements OnInit {
 
-  seedColors
+  seedColors;
 
   constructor(paletteService: PaletteService) {
     this.seedColors = paletteService.seedColors;
@@ -22,8 +22,8 @@ export class PaletteListComponent implements OnInit {
     // console.log('this.', this.seedColors)
   }
 
-  test(){
-    // console.log(paletteService.xxx)
+  test() {
+
   }
 
 }

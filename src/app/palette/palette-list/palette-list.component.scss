@@ -1,7 +1,9 @@
 .palette-list-container{
     max-width: 860px;
     margin: auto auto;
+    padding-bottom: 2rem;
     // padding-bottom: 2rem;
+    // background-color: rebeccapurple;
 }
 
 .title{
@@ -11,7 +13,9 @@
 }
 
 .palette-list{
-    height: 200px;
+    // background-color: rebeccapurple;
+    // height: 200px;
+    // margin-bottom: 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     // grid-template-columns: repeat(3, 30%);
